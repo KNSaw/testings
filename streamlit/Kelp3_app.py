@@ -34,7 +34,8 @@ def load_data(path):
 
     return pd.DataFrame(data)
 
-DATA_PATH = "Kelp3_dataset_anotasi.jsonl"
+BASE_DIR = os.path.dirname(__file__)
+DATA_PATH = os.path.join(BASE_DIR, "..", "dataset", "Kelp3_dataset_anotasi.jsonl")
 df = load_data(DATA_PATH)
 
 st.sidebar.title("Navigasi")
